@@ -1,8 +1,41 @@
 body {
-    text-align: justify;
+    
+    
 }
 
 header {
     text-align: center;
-    
+    background-image: linear-gradient(to bottom, #4560dbf3, #51dbe2a4 );
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+
+}
+
+header > nav {
+    text-align: left;
+
+}
+
+a {
+    text-decoration: none;
+    color: #0d6b25;
+}
+
+nav :hover {
+    color: rgb(49, 47, 182);
+    text-decoration: underline;  
+}
+
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    text-align: justify;
+    image-rendering: auto;
+    padding: 30px;
+    margin: 0px 30px 0px 30px;
+}
+
+img {
+    display: block;
+    margin: 0px auto;
 }
