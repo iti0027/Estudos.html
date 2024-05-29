@@ -13,17 +13,28 @@ header {
 
 header > nav {
     text-align: left;
+    
+    
+    
 
 }
 
 a {
     text-decoration: none;
     color: #0d6b25;
+    padding: 10px;
+    
+    
+    
+    
 }
 
 nav :hover {
     color: rgb(49, 47, 182);
-    text-decoration: underline;  
+    text-decoration: underline; 
+    width: 100px;
+    height: 100px;
+
 }
 
 main {
@@ -33,6 +44,7 @@ main {
     image-rendering: auto;
     padding: 30px;
     margin: 0px 30px 0px 30px;
+    color: rgb(44, 40, 40)
 }
 
 img {
