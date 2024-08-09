@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(212, 240, 240);
+            
+        }
+
+        section{
+            width: 700px;
+            height: 600px;
+            display: flexbox;
+            margin: auto;
+            background-color: rgba(240, 193, 233, 0.658);
+            padding: 20px;
+            margin: 30px;
+            color: rgb(123, 121, 241);
+        }
+
+        section > input{
+            background-color: rgba(17, 255, 124, 0.582);
+            width: 80px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+       <section>
+           <h1>Fazendo um teste</h1>
+           <h2>testando sua idade...</h2>
+           <p>Por favor, digite a sua idade aqui <input type="number" name="idade" class="idade-usuario"></p>
+           <input type="button" value="Verificar" onclick="idade()">
+           <div class="resultado"></div>
+       </section>
+
+
+       <script>
+        function idade(){
+            var idade = document.querySelector('input.idade-usuario')
+            var resultado = document.querySelector('div.resultado')
+            var age = Number(idade.value)
+
+            if (age < 18){
+                resultado.innerHTML = `Voce nao pode tirar a habilitacao ainda.`
+            } else{
+                resultado.innerHTML = `Voce esta hapito para tirar sau habilitacao. Dirija com cuidado.`
+            } 
+        }
+       </script>
+</body>
+</html>
