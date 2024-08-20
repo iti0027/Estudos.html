@@ -8,19 +8,26 @@
 <body>
     <header>
         <h1>Deu green!!!</h1>
-        <p class="introducao">Prazer em lhe conhecer! Eu me chamo ítalo e sou o criador desta página. Espero que se divirta!</p>
+        <p class="introducao">Eu me chamo ítalo e sou o criador desta página. Espero que se divirta!</p>
     </header>
 
-    <main id="conhecendo">
+    <main>
         <h2>O que acha de nos conhecermos melhor?</h2>
+
         <p>Vou fazer algumas perguntar simples.</p>
+
+        <p>Qual o seu nome? <input type="text" name="nome" class="nome"></p>
+        <div class="nomeResultado"></div>
+
         <p>Qual a sua idade? <input type="number" name="idade" class="idade"></p>
-        <input type="button" value="veriicar" onclick="conhecendo()">
-        <div class="idade-resultado"></div>
-        <p>Onde você nasceu? <input type="text" name="cidade" class="cidade"></p>
-        <div class="cidade-resultado"></div>
-        <p>Você tem algum animal de estimação? Se sim, qual é o animal <input type="text" name="pet-tipo" class="pet-tipo"> e o nome que ele(a) recebeu?<input type="text" name="pet-name" class="pet-name"></p>
-        <div class="pet.resultado"></div>
+        <div class="idadeResultado"></div>
+
+        <p>Qual foi a cidade que você nasceu? <input type="text" name="cidade" class="cidade"></p>
+        <div class="cidadeResultado"></div>
+
+        <p>Você tem algum animal de estimação? Se sim, qual é o animal <input type="text" name="petTipo" class="petTipo"> e o nome que ele(a) recebeu?<input type="text" name="petName" class="petName"></p>
+
+        <input type="button" value="Verificar" onclick="verificar()">
     </main>
 
     <footer>

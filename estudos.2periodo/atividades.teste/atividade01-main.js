@@ -1,33 +1,33 @@
-function bemVindo (){
-    window.alert('Olá! Muito bem vindo ao nosso site.');
-    var nome = window.prompt('Pode me informar o seu nome?');
-        if (nome == 0){
-            alert('Por favor, insira o seu nome :).');
-        } else{
-            window.alert(`Olá, ${nome}! Espero que se divirta-se no nosso site :) !`);
-        }
-     
-}
+window.alert('Bem vindo ao nosso site! :p');
 
-function introducao() {
-    var welcome = document.querySelector('p.introducao');
-    innerhtml.p.introducao = `Prazer em lhe conhecer ${nome}! Eu me chamo ítalo e sou o criador desta página. Espero que se divirta!`
-}
+function verificar(){
+    var nome = document.querySelector('input.nome');
+    var Nresultado = document.querySelector('div.nomeResultado');
 
-function conhecendo (){
-    var age = document.querySelector('input.idade');
-    var idade = Number(age.value);
+    var idade = document.querySelector('input.idade');
+    var Iresultado = document.querySelector('div.idadeResultado');
+
     var cidade = document.querySelector('input.cidade');
-    var petTipo = document.querySelector('input.pet-tipo');
-    var petName = document.querySelector('input.pet-name');
+    var Cresultado = document.querySelector('div.cidadeResultado')
 
-    if (idade == 0){
-        innerhtml.idade-resultado == 'Por favor, insira a sua idade.'
+    var petTipo = document.querySelector('input.petTipo');
+    var petName = document.querySelector('input.petName');
+
+    if (nome == 0){
+        Nresultado.innerHTML = 'Por favor, insira o seu nome.'
     } else{
-            innerWidth.idade-resultado == `Essa idade é maravilhosa.`
+        Nresultado.innerHTML = `Muito prazer em conhece-lo(a) <strong>${nome}</strong>!`
+    }
+
+    if(idade == 0){
+        Iresultado.innerHTML = 'Por favor, insira a sua idade.'
+    } else{
+        Iresultado.innerHTML = `Hmm então quer dizer que você tem ${idade} não seu <strong>${nome}</strong> bom saber.`
+    }
+
+    if (cidade == 0 ){
+        Cresultado.innerHTML = 'Por favor, insira a cidade em que nasceu.'
+    } else{
+        Cresultado.innerHTML = `Que legal! Conheço ${cidade} muito bem. Sempre ia para lá quando criança. Vamos marcar de nos encontrar qualquer dia por lá <strong>${nome}</strong>, o que acha?`
     }
 }
-
-conhecendo();
-bemVindo();
-introducao();
