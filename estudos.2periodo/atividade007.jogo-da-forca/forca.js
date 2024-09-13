@@ -1,0 +1,1 @@
+const forca = document.getElementById

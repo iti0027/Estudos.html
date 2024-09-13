@@ -1,0 +1,35 @@
+
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    height: 100vh;
+}
+
+.corpo{
+    width: 600px;
+    height: 600px;
+    background-color: aliceblue;
+}
+
+.p1 {
+    background-color: rgba(163, 7, 163, 0.548);
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.out{
+    display: flex;
+    flex-direction: row;
+}
+
+.quadrado {
+    width: 5px;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(255, 255, 0, 0.747);
+    
+}
