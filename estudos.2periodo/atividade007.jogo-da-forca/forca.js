@@ -55,6 +55,8 @@ function gerarPalavras(){
 function aparecerPalavra (){
     palavraAleatoria.innerHTML = ""
     guardarPalavra.split("").forEach((letra) =>{
-        palavraAleatoria.includes(letras) ? `<p></p>`
+        palavraAleatoria.includes(letras) ? `<p>{letra}</p>`: 
     })
 }
+
+let teste = p
