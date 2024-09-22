@@ -33,13 +33,16 @@ let butons = document.getElementById("forcaButoes");
 let palavraAleatoria = document.getElementById ("palavraAleatoria");
 let guardarPalavra
 let letraSelecionada = []
+let paragrafo = document.getElementById("paragrafo");
+let mostrarLetra = document.getElementById("mostrarLetra");
+let erro = 0
 
 
 letras.forEach((letra) => {
     let butoesLetras = document.createElement("button");
     butoesLetras.innerText = letra
     butoesLetras.addEventListener("click", () => {
-        clicando(letra)
+        clicando(letra);
     })
 
     butons.appendChild(butoesLetras)
@@ -55,8 +58,47 @@ function gerarPalavras(){
 function aparecerPalavra (){
     palavraAleatoria.innerHTML = ""
     guardarPalavra.split("").forEach((letra) =>{
-        palavraAleatoria.includes(letras) ? `<p>{letra}</p>`: 
+        palavraAleatoria.insertAdjacentHTML("beforeend",letraSelecionada.includes(letra) ? `<p>${letra}</p>`: `<p>_</p>`);
     })
 }
 
-let teste = p
+function clicando (tecla){
+    console.log(guardarPalavra.includes(tecla));
+    letraSelecionada.push(tecla);
+    paragrafo.innerText = letraSelecionada
+    mostrarLetra.appendChild(paragrafo);
+    if (!guardarPalavra.includes(tecla)){
+        contarErros()
+        return
+    }
+    aparecerPalavra();
+    
+}
+
+function contarErros(){
+    erro++
+    if (erro == 1){
+        document.getElementById("cabeca").style.display = "block"
+
+    } else if (erro == 2){
+        document.getElementById("corpo").style.display = "block"
+    } else if (erro == 3){
+        document.getElementById("bracoD").style.display = "block"
+    } else if (erro == 4){
+        document.getElementById("bracoE").style.display = "block"
+    } else if (erro == 5){
+        document.getElementById("pernaD").style.display = "block"
+    } else {
+        document.getElementById("pernaE").style.display = "block"
+        alert("Você perdeu, seu merdinha!!")
+        gerarPalavras();
+        erro = 0
+        letraSelecionada = []
+        document.getElementById("cabeca").style.display = "none"
+        document.getElementById("bracoD").style.display = "none"
+        document.getElementById("bracoE").style.display = "none"
+        document.getElementById("pernaD").style.display = "none"
+        document.getElementById("pernaE").style.display = "none"
+        document.getElementById("corpo").style.display = "none"
+    }
+}
