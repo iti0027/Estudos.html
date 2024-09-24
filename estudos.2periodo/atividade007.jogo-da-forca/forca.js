@@ -100,5 +100,6 @@ function contarErros(){
         document.getElementById("pernaD").style.display = "none"
         document.getElementById("pernaE").style.display = "none"
         document.getElementById("corpo").style.display = "none"
+        alert.apply("Parabéns");
     }
 }
