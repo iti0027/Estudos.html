@@ -110,7 +110,7 @@ const handleBtAdicionarClick = async ()=>{
         if (!resposta.ok){
             alert('Erro ao acessar o servidor' + resposta.status);
             throw new Error('Erro encontrado' + resposta.status);
-        }
+        } 
         inputDescricao.value = "";
         inputDescricao.focus();
         getTarefas();

@@ -33,6 +33,8 @@ const showList = async (data) => {
         li.appendChild(btRemove);
         olLista.appendChild(li);
 
+        btRemove.onclick = () => removerDespesa(resultado);
+
     })    
 }
 
@@ -59,28 +61,69 @@ butao.addEventListener("click",async () =>{
     let textoValue = inputTexto.value.trim();
     let numValue = inputNum.value;
 
-    if (textoValue = ""){
+    if (textoValue === ""){
         alert("Por favor, preencha o nome do item.");
-    } else if (numValue = ""){
+    } else if (numValue === ""){
         alert("Por favor, preencha o valor do item")
-    } 
-    try {
-        const response = await fetch(urlBack4app,{
-            method: "POST",
-            headers: headerJson,
-            body: JSON.stringify({
-                descricao: textoValue,
-                valor: numValue,
-            }) 
-        })
-        if(!response.ok){
-            alert("Problema ao acessar o servidor" + response.status);
-            throw new Error("Problema encontrado" + response.status);
+    } else{
+        try {
+            const response = await fetch(urlBack4app,{
+                method: "POST",
+                headers: headerJson,
+                body: JSON.stringify({
+                    descricao: textoValue,
+                    valor: parseFloat(numValue),
+                }) 
+            })
+            if(!response.ok){
+                alert("Problema ao acessar o servidor" + response.status);
+                const errorData = await response.json();
+                console.log("Erro detalhado:", errorData);
+                throw new Error("Problema encontrado" + response.status);
+            }
+            addItem()
+        } catch (error) {
+            console.log(error)
         }
-        addItem()
-    } catch (error) {
-        console.log(error);
     }
 })
 
-window.onload = addItem
+const removerDespesa =  async (despesa) =>{
+    try {
+       
+        const response = await fetch(`${urlBack4app}/${despesa.objectId}`, {
+            method: "DELETE",
+            headers: headerJson,
+        });
+        if (!response.ok){
+            alert('Erro ao acessar o servidor' + response.status);
+            throw new Error('Erro encontrado' + response.status);
+        }
+        addItem();
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const autualizarItem = async (despesa) => {
+    let numValue = inputNum.value;
+    inputTexto.disabled = true;
+    try {
+        if (numValue == 0){
+            alert('Por favor, atualize o valor do item');
+        }
+    
+        const response = await fetch(`${urlBack4app}/${despesa.objectId}`, {
+            method: "PUT",
+            headers: headerJson,
+            body: JSON.stringify({valor:numValue})
+        })
+        if (!response.ok){
+            alert('Erro ao acessar o servidor' + response.status);
+            throw new Error('Erro encontrado' + response.status);
+        }
+    } catch (error) {
+        console.log(utualizarItem);
+    }
+    
+}
