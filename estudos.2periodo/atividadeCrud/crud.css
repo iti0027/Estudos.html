@@ -1,0 +1,46 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(187, 121, 55);
+    color:#4d3119 ;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.conteudo{
+    border-radius: 20px;
+    background-color: #c8711aba;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px #3C352F;
+}
+
+.parag1{
+    text-align: center;
+
+}
+
+.parag1:hover{
+    text-decoration: underline;
+    transition-duration: 1s;
+    font-weight: bolder;
+}
+
+.inputTexto{
+    background-color: #bb814ec3;
+    box-shadow: 1px 1px 3px black;
+}
+
+.inputNum{
+    background-color: #bb814ec3;
+    box-shadow: 1px 1px 3px black;
+}
+
+.bt{
+    background-color: #BB7937;
+}
+
+.bt:hover{
+    color:white;
+}

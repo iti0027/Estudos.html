@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="crud.css">
 </head>
 <body>
-    <h1>Atividade CRUD add valores</h1>
-    <label for="inputtexto"> </label><input type="text" id="inputTexto">  
-    <button id="enviar" onclick="enviar">Enviar</button>
-    <hr/>
-    <label for="inputNUm"> </label><input type="number" id="inputNUm">
-
-    <ol id="olListaId"></ol>
+    <div class="conteudo">
+        <h1 class="parag1">Despesas</h1>
+        <p class="pNome">Digite o <strong>nome</strong> do item que deseja adicionar: <label for="inputtexto"> </label><input type="text" id="inputTexto" class="inputTexto"> </p>
+        <p class="pNum">Digite o <strong>valor</strong> do item que foi adicionado: <label for="inputNUm"> </label><input type="number" id="inputNUm" class="inputNum"></p>
+        <button id="enviar" onclick="enviar" class="bt">Enviar</button>
+        <ol id="olListaId"></ol>
+    </div>
     <script src="crud.js"></script>
 </body>
 </html>

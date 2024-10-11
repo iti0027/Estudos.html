@@ -25,8 +25,11 @@ const showList = async (data) => {
 
         let btAdd = document.createElement("button");
         btAdd.innerHTML = "Adicionar"
+        btAdd.style.backgroundColor = '#C5BBB0';
+
         let btRemove = document.createElement("button");
         btRemove.innerHTML = "Remover"
+        btRemove.style.backgroundColor = '#C5BBB0'
 
         li.appendChild(text);
         li.appendChild(btAdd);
@@ -106,13 +109,14 @@ const removerDespesa =  async (despesa) =>{
 }
 
 const autualizarItem = async (despesa) => {
-    let numValue = inputNum.value;
+    let numValue = parseFloat(inputNum.value);
     inputTexto.disabled = true;
+    if (isNaN(numValue) || numValue === 0){
+        alert('Por favor, insira um valor válido para atualizar.')
+        return;
+    }
+
     try {
-        if (numValue == 0){
-            alert('Por favor, atualize o valor do item');
-        }
-    
         const response = await fetch(`${urlBack4app}/${despesa.objectId}`, {
             method: "PUT",
             headers: headerJson,
@@ -120,10 +124,13 @@ const autualizarItem = async (despesa) => {
         })
         if (!response.ok){
             alert('Erro ao acessar o servidor' + response.status);
+            const errorData = await response.json();
             throw new Error('Erro encontrado' + response.status);
         }
+
+        addItem();
     } catch (error) {
-        console.log(utualizarItem);
+        console.log(error);
     }
     
 }
