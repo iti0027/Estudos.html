@@ -1,6 +1,6 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(187, 121, 55);
+    background-color: rgb(240, 216, 192);
     color:#4d3119 ;
     display:flex; 
     justify-content: center;
@@ -10,7 +10,7 @@ body{
 
 .conteudo{
     border-radius: 20px;
-    background-color: #c8711aba;
+    background-color: #f0ab66ba;
     padding: 10px;
     margin: 10px;
     box-shadow: 1px 1px 3px #3C352F;
@@ -43,4 +43,5 @@ body{
 
 .bt:hover{
     color:white;
-}
+}´
+

@@ -2,6 +2,9 @@ const inputTexto = document.getElementById('inputTexto');
 const inputNum = document.getElementById('inputNUm');
 const olLista = document.getElementById('olListaId');
 const butao = document.getElementById('enviar');
+const resultado = document.getElementById('resultado');
+const somarInput = document.getElementById('somarReceitas');
+
 
 const urlBack4app = "https://parseapi.back4app.com/classes/Despesas";
 const headers = {
@@ -17,6 +20,8 @@ const headerJson = {
 const showList = async (data) => {
     olLista.innerHTML = "";
     const resultadoData = data.results;
+    const resultadoValores = [];
+    let sum
 
     resultadoData.forEach((resultado) => {
         const text = document.createTextNode(`${resultado.descricao} = ${resultado.valor}`);
@@ -38,7 +43,11 @@ const showList = async (data) => {
 
         btRemove.onclick = () => removerDespesa(resultado);
 
+        resultadoValores.push(resultado.valor)
+        sum = resultadoValores.reduce((Acc, ActV) => Acc + ActV, 0)
+        console.log(sum)
     })    
+    somarInput.value = sum
 }
 
 const addItem = async () => {
@@ -52,7 +61,6 @@ const addItem = async () => {
             throw new Error("Problema encontrado" + response.status);
         } 
         const data = await response.json()
-        console.log(data)
         showList(data);
         
     } catch (error) {
@@ -127,10 +135,10 @@ const autualizarItem = async (despesa) => {
             const errorData = await response.json();
             throw new Error('Erro encontrado' + response.status);
         }
-
         addItem();
     } catch (error) {
         console.log(error);
     }
     
 }
+window.onload = addItem()
