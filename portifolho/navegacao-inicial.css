@@ -1,0 +1,48 @@
+body{
+    background-color: #121212;
+    color: #d8d4d4;
+}
+
+.menu {
+    height: 100px;
+    background-image:linear-gradient(to right, #12191e, #0d2332);
+    width: 100%;
+    margin-top: 0px;
+}
+
+.linkMenu{
+    display: flex; /*deixar os links na mesma linha*/
+    justify-content: space-around; /*espaço entre os links.*/
+    list-style: none;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.navMenu {
+    width: ;
+}
+
+.a {
+    text-decoration: none;
+    display: block;
+    transition: ease-in-out 0.3s;
+    color:#d8d4d4;
+
+    
+}
+
+.a:hover{
+    color: #3c78a2;
+    transition-duration: 0.3;
+}
+
+.tela-inicial{
+    display: flex;
+    justify-content:center;
+    
+    
+}
+
+.p1 {
+    
+}
