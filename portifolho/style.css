@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+header{
+    padding: 50px;
+    background-color: black;
+}
+
+
+.ulLinks{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    color: antiquewhite;
+    transition: ease-in-out 1s;
+    font-family: Saira,sans-serif;
+    font-size: 15.2px;
+}
+
+a:hover{
+    color:rgb(25, 137, 57)
+}
+
+.home{
+    background-color: rgb(20, 18, 18);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:20px;
+}
+
+.nome{
+    font-size: 3em;
+    color: rgb(226, 223, 223);
+}
+
+.dev{
+    font-size: 2em;
+    color: rgb(25, 137, 57);
+    transition: ease-in 1.5s;
+}
+
+
+.icones-home{
+    display: flex;
+}
+
+.about-me{
+    width:100%;
+    font-family: Saira, sans-serif;
+    background-color: black;
+    color:rgb(207, 207, 207);
+    font-size: 19.2px;
+
+}
+
+.position-about-me{
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 67px;
+    margin: auto;
+    max-width: 1000px;
+}
+
+h2{
+    margin: auto;
+    padding: 48px, 0px;
+}
+
+h3{
+    margin: auto;
+    padding: 48px, 0px;
+}
+
+.habilits{
+    width: 100%;
+    font-family: Saira, sans-serif;
+    background-color: rgba(0, 0, 0, 0.968);
+    font-size: 19.2px;
+    color:rgb(207, 207, 207);
+}
+
+.position-habilits{
+    margin:auto;
+    max-width: 1000px;
+    padding: 25px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 53px;
+}
+
+
+.position-iconFE{
+    position:relative;
+    width: 50px;
+    margin: auto;
+}
+
+.background-image{
+    width: 100%;
+    height: auto;
+}
+
+.overlay{
+    position: absolute;
+    left: -49px;
+    top: -38px;
+    width: 30px;
+}
+
+.overlay-1{
+    position: absolute;
+    left: 62px;
+    top: -38px;
+    width: 35px;
+}
+
+.js-comment{
+    color:rgb(27, 188, 73);
+}
+
+.py-comment{
+    color: rgb(231, 130, 36);
+}
+
+.position-iconPY{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 50px;
+}
+
+.position-iconDB{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 60px;
+}
+
+.projects{
+    width: 100%;
+    font-family: Saira, sans-serif;
+    background-color: rgb(0, 0, 0);
+    font-size: 19.2px;
+    color:rgb(207, 207, 207);
+}
+
+.position-projects{
+    margin:auto;
+    max-width: 1000px;
+    padding: 25px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 53px;
+}
+
+.nav-projects-1{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.nav-projects-2{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.nav-projects-3{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer{
+    padding: 50px;
+    background-color: black;
+    color: antiquewhite;
+    font-family: Saira,sans-serif;
+    font-size: 19.2px;
+}
+
+.contact-email{
+    display: flex;
+    justify-content: space-around;
+    width: 70px;
+    padding:15px;
+}
+
+.contact-github{
+    display: flex;
+    justify-content: space-around;
+    width: 70px;
+    padding: 15px;
+}

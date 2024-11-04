@@ -3,98 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolho | ítalo Cézar</title>
-    <!--icon com meu nome-->
-    <link 
-        rel="icon" 
-        href=""
-    />
-    <!--css navegação inical-->
-    <link rel="stylesheet" href="navegacao-inicial.css">
-    <!--css sobre mim-->
-    <link rel="stylesheet" href="sobre-mim.css">
-    <!--css projetos-->
-    <link rel="stylesheet" href="projetos.css">
-    <!--css certificações-->
-    <link rel="stylesheet" href="certificacoes.css">
-    <!--css habilidades-->
-    <link rel="stylesheet" href="habilidades.css">
+    <title>Portifolho | Ítalo Cézar</title>
+    <link rel="shortcut icon" href="midia/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div id="menu" class="menu">
-            <nav class="navMenu">
-                <ul class="linkMenu">
-                    <li><a href="#" class="a">Ínicio</a></li>
-                    <li><a href="#" class="a">Sobre mim</a></li>
-                    <li><a href="#" class="a">Projetos</a></li>
-                    <li><a href="#" class="a">Certificações</a></li>
-                    <li><a href="#" class="a">Habilidades</a></li>
+    <header>
+        <div class="menu">
+            <nav>
+                <ul class="ulLinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Habilities</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Certifications</a></li>
                 </ul>
             </nav>
         </div>
-
-    <!--tela inicial-->
-    <section class="tela-inicial">
-        <p class="p1">
-            Olá, me chamo ítalo Cézar
-            <br/>
-            Desenvolvedor Web
-        </p>
-        <img src="midia/Foto Ítalo Cézar-m.png" alt="foto-pessoal-minha" class="img1">
-    </section>
-
-    <!--sobre mim-->
-    <section class="sobre-mim">
-        <h2>Sobre mim</h2>
-        <p>
-            Meu nome é ítalo Cézar e sou uma pessoa extremamente curiosa que ama de desafiar e embarcar em novas aventuras. Decide embarcar no mundo chamado Programação, na qual está sendo uma aventura sensacional e singular.
-        </p>
-        <p>
-            Atualmente estou cursando Sistemas para Internet (SI) onde estou focando no meu aprendizado em Desenvolvimento Web.
-        </p>
-    </section>
-
-    <!--projetos-->
-    <section class="projetos">
-        <h2>Projetos</h2>
-        <div>
-            <a href="../estudos.2periodo/atividade010.crud/crud.html" class="crud-atividade">CRUD</a>
-            <a href="#" class="jogo-senha-atividade">Jogo Senha</a>
-            <a href="#" class="projeto-vazio">Em Breve</a>
+    </header>
+    <section class="home">
+        <div class="part1">
+            <h1 class="nome">ítalo Cézar.</h1>
+            <h2 class="dev">Desenvolvedor Web</h2>
+            <div class="icones-home">
+                <a href="https://www.linkedin.com/in/italo-cezar/"
+                 target="_blank"><img src="midia/linkding.png" alt="linkeding"></a>
+                <a href="https://github.com/iti0027" target="_blank"><img src="midia/github.png" alt="github"></a>
+                <a href="https://www.instagram.com/italovercoza/" target="_blank"><img src="midia/instagram.png" alt="instagram"></a>
+            </div>
         </div>
     </section>
 
-    <!--certificações-->
-    <section>
-        <h2>Certificações</h2>
-        <div>
-
+ <!--Section about me-->
+    <section class="about-me">
+        <div class="position-about-me">
+            <h2 class="h2">About me</h2>
+            <p>Sou Ítalo, uma pessoa extremamente curiosa que adora enfrentar desafios e se aventurar em novas experiências. Decidi mergulhar no universo da Programação, e essa jornada tem sido, até agora, uma aventura única e profundamente gratificante. Cada linha de código me mostra algo novo, e estou empolgado para descobrir o que mais esse mundo incrível tem a oferecer.</p>
+            <h3 class="h3">Curiosidades</h3>
+            <p>Meu maior objetivo é conhecer mais sobre o nosso mundo, visitando novos lugares, explorando diferentes culturas e compartilhando experiências e memórias com outras pessoas. Sou apaixonado por animais e adoro aventuras que envolvem a natureza, como trilhas, praias e cachoeiras. Além disso, não consigo viver sem treinar.</p>
         </div>
     </section>
 
-    <!--habilidades-->
-    <section>
-        <h2>Habilidades</h2>
-        <div>
-            <p>HTML5</p>
-            <p>CSS3</p>
-            <p>JavaScript</p>
-            <p>Python</p>
+<!--section of habilits-->
+    <section class="habilits">
+        <div class="position-habilits">
+            <h3>Habilits</h3>
+            <p>A <in class="js-comment">/*santa trindade*/</in> do desenvolvedor Front-End — HTML5, CSS3 e JavaScript — foi meu ponto de partida no universo da programação. Com estudos intensivos e projetos práticos, refinei meus conhecimentos e continuo em constante aprendizado para aprimorar cada vez mais minhas habilidades.</p>
+            <div class="position-iconFE">
+                <img src="midia/html5-2.png" alt="html5" class="overlay">
+                <img src="midia/js-2.png" alt="js" class="background-image">
+                <img src="midia/css3-2.png" alt="css3" class="overlay-1">
+            </div>
+            <p>Pensando em conhecer o <in class="py-comment"> '''metaverso'''</in> do Back-End, comecei os meus primeiros passos com a linguágem Python, uma das melhores diga-se de passagem, atravéz de estudos e projetos básicos para aprimorar minha bagagem de conhecimento e versatilidade.</p>
+            <img src="midia/python-2 (1).png" alt="python" class="position-iconPY">
+            <p>Comecei meus estudos em Banco de Dados para, além de melhor compreensão, fornecer um projeto mais completo e detalhado com o intuito de solucionar as dores dos meus futuros clientes.</p>
+            <img src="midia/db-2.png" alt="data-base" class="position-iconDB">
         </div>
+    </section>
+
+    <!--section projects-->
+    <section class="projects">
+    <div class="position-projects">
+        <h3>Projects</h3>
+            <nav class="nav-projects-1">
+                <li class="project-1">
+                    <a href="#">Jogo da Palavra chave</a>
+                </li>
+                <li class="project-2">
+                    <a href="#">Novos Projetos em Breve</a>
+                </li>
+            </nav>
+            
+            <nav class="nav-projects-2">
+                <li class="project-3">
+                    <a href="#">Novos Projetos em Breve</a>
+                </li>
+                <li class="project-4">
+                    <a href="#">Novos Projetos em Breve</a>
+                </li>
+            </nav>
+            <button class="bt-verMais">Ver mais</button>
+            <nav class="nav-projects-3">
+                <li class="project-5">
+                    <a href="#">Novos Projetos em Breve</a>
+                </li>
+                <li class="project-6">
+                    <a href="#">Novos Projetos em Breve</a>
+                </li>
+            </nav>
+    </div>
+    </section>
+
+    <section class="certifications">
+
     </section>
 
     <footer>
-        <h2>Contato</h2>
-        <h3>E-mail para contato</h3>
-        <p>italovercoza27@gmail.com</p>
-
-        <div class="links">
-            <h3>Me encontre nas Redes Sociais</h3>
-            <a href="https://www.linkedin.com/in/italo-cezar/" target="_blank" class="linkedin-link">Linkedin</a>
-            <a href="https://github.com/iti0027/iti0027" target="_blank" class="github-link">Github</a>
-            <a href="https://www.instagram.com/italovercoza/" target="_blank" class="insta-link">Instagram</a>
+        <h2>Contatos</h2>
+        <div class="contact-email">
+            <img src="midia/gmail.png" alt="gmail">
+            <p>italovercoza27@gmail.com</p>
+        </div>
+        <div class="contact-github">
+            <img src="midia/github-2 (1).png" alt="github">
+            <p>iti0027</p>
         </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
