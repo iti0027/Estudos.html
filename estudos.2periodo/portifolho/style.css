@@ -9,6 +9,8 @@ header{
 }
 
 
+
+
 .ulLinks{
     list-style: none;
     display:flex;
@@ -182,6 +184,19 @@ h3{
     flex-wrap: wrap;
 }
 
+.bt-verMais{
+    margin:auto;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    font-family: Saira, sans-serif;
+    border-radius: 8px;
+}
+
+.bt-verMais:hover{
+    background-color:rgb(78, 183, 108);
+    transition: ease-in-out .5s;
+}
+
 .nav-projects-3{
     list-style: none;
     display:flex;
@@ -189,6 +204,13 @@ h3{
     width: 100%;
     flex-wrap: wrap;
 }
+
+.conteudoOculto{
+    display: none;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
 
 footer{
     padding: 50px;
