@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="palavra.css">
+    <title>Palavra Chave</title>
+</head>
+<body>
+    <div>
+        <h1>Jogo da Palavra Chave</h1>
+        <h3>Bulls and Cows</h3>
+        <input type="number" max="9999" min="0000" id="tentativa" placeholder="ex:1234">
+        <button id="btVerificar" onclick="verificar()">verificar</button>
+        <br>
+        <button id="btNewGame" onclick="newGame()">Novo Jogo</button>
+        <button id="btQuit" onclick="quit()">Sair do Jogo</button>
+
+        <p>Regras</p>
+        <textarea name="regras" id="regras" cols="60" rows="20">jogar: Você precisa adivinhar o códiga secreto que possue 4 digitos. Esse código possue 4 números inteiros e que não se repetem. Além disso, cada vez que você escolher um número correto, mas que esteja na posição errada, ele sera chamado de C (cows) e caso esse número esteva na posição correta do código, sera chamado de B (bulls).
+
+O jogo é simples, porém não é fácil! Você precisa adivinhar os 4 dígitos do código na sequência correta.
+
+EX: O Código é "1234" e sua tentativa foi "4203"
+
+Você teve 1 bull e 2 cows sendo o número "2" o Bull e os números "4 e 3" os Cows.</textarea>
+    </div>
+
+
+    <script src="palavra.js"></script>
+</body>
+</html>
