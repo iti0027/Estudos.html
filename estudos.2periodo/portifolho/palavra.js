@@ -1,59 +1,67 @@
-const codigo = document.getElementById('tentativa');
 const btVerificar = document.getElementById('btVerificar');
-const btNewGame = document.getElementById('btNewGame');
-const btQuit = document.getElementById('btQuit');
-
 let contador = 0;
+
 function randomNumber(){
-    let numero = Math.floor(Math.random()* 10);
-    return numero;
+    return Math.floor(Math.random()* 10);
+
 }
 
 function codigoNumeros (){
-    let quarto = randomNumber()
-    for (let i; i = 1; i++){
-        let terceiro = randomNumber();
-        let segundo = randomNumber();
-        let primeiro = randomNumber();
+    let quarto = randomNumber();
+    let terceiro, segundo, primeiro;
+    for (let i =0; i< 1000; i++){
+        terceiro = randomNumber();
+        segundo = randomNumber();
+        primeiro = randomNumber();
         if (terceiro!= quarto && segundo!= quarto && segundo!= terceiro && primeiro!= quarto && primeiro!= terceiro && primeiro!= segundo){break}
     }
-    let randomNumberString = quarto.toString() + terceiro.toString() + segundo.toString() + primeiro.toString();
+    let randomNumberString = `${quarto} ${terceiro} ${segundo} ${primeiro}`;
     console.log(randomNumberString);
     return randomNumberString;
 }
 
 function verificar(numero){
     numero = numero.toString();
-    verif = true;
+    if (numero.length !== 4 || isNaN(numero)) {
+        return false; // número inválido
+    }
+    
     for ( let i = 0; i < 4; i++){
-        if (numero.lastIndexOf(numero.charAt(i))!=i){
-            verif = false;
-            break;
+        if(numero.lastIndexOf(numero.charAt(i)) !== i) {
+            return false; // número contem dígitos repetidos
         }
     }
-    return verif;
+    return true; // número válido
 }
-    randomNumberString = codigoNumeros();
+let randomNumberString = codigoNumeros();
 
 function conferir(){
-    let userNumber = $("#try").val().toString();
+    let userNumber = document.getElementById('tentativa').value;
+    let regras = document.getElementById('regras');
     let cows = 0;
     let bulls= 0;
-    if(verificar(userNumber)===false){$("#regras").prepend(userNumber + "- Número inválido ou número duplicado, por favor, tentar novamente.")} else{
-        for (let n = 0; n<4; n++){
-            for(let i = 0; i < 4; i++){
-                if(userNumber.charAt(i) === randomNumberString.charAt(n) && i == n) {bulls++;}
-                else{if(userNumber.charAt(i)=== randomNumberString.charAt(n)) {cows++}}
+
+    if(!verificar(userNumber)){
+        regras.value = `${userNumber} - Número inválidp ou número duplicado, por favor, inserir novamente os 4 números.`
+        } 
+        else{
+            for (let n = 0; n < 4; n++){
+                for(let i = 0; i < 4; i++){
+                    if(userNumber.charAt(i) === randomNumberString.charAt(n)) {
+                        if (i === n) bulls++;
+                        else cows++;
+                    }
+                }
             }
-        }
-    }
+         }
     contador++;
-    if(bulls ===4){
-        $("#regras").prepend(`${userNumber} - 4 bulls! Você ganhou depois de ${contador} tentativas.`)
+    if(bulls === 4){
+        regras.value = `${userNumber} - 4 bulls! Você ganhou depois de ${contador} tentativas.\n`
         randomNumberString = codigoNumeros();
         contador = 0;}
-    else{
-        $('#regras').prepend(`${userNumber} - ${cows} cow(s) e ${bulls} bull(s), tentativas: ${contador}`)}
-        $("#tentativas").val('');
-    
+    else{ 
+        regras.value = `${userNumber} - ${cows} conw(s) e ${bulls} bull(s), tentativas: ${contador}\n` + regras.value;
+    }
+
+    document.getElementById('tentativa').value ='';
 }
