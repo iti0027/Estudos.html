@@ -28,7 +28,7 @@ a{
 }
 
 a:hover{
-    color:rgb(25, 137, 57)
+    color:rgb(25, 137, 57);
 }
 
 .home{
@@ -49,7 +49,7 @@ a:hover{
 .dev{
     font-size: 2em;
     color: rgb(25, 137, 57);
-    transition: ease-in 1.5s;
+    transition: ease-in .5s;
 }
 
 
@@ -174,7 +174,10 @@ h3{
     width: 100%;
     flex-wrap: wrap;
 }
-
+.project-1:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(25, 137, 57);
+}
 .nav-projects-2{
     list-style: none;
     display:flex;
