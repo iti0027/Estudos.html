@@ -1,0 +1,46 @@
+body{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(20, 18, 18);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.highlight{
+    background-color: rgb(67, 67, 67);
+    color: rgb(25, 180, 69);
+    border-radius: 20px;
+    text-align: center;
+    margin: 0px 10px 0px 10px;
+}
+
+.inputNum{
+    width: 200px;
+    background-color: rgb(191, 187, 187);
+    color:rgb(20, 18, 18);
+}
+
+.btVerificar{
+    background-color: rgb(120, 119, 119);
+    color: rgb(224, 210, 210);
+}
+
+.btNewGame:hover{
+    background-color:rgb(120, 119, 119);
+    transition: .5s;
+    color:rgb(116, 210, 116);
+}
+
+.p{
+    color: rgb(25, 180, 69);
+    text-align: center;
+    margin: 0px 10px 0px 10px;
+    font-weight: bolder;
+    padding: 10px;
+}
+.regras{
+    background-color: rgb(191, 187, 187);
+    color:rgb(20, 18, 18);
+
+}

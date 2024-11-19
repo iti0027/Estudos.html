@@ -65,3 +65,4 @@ function conferir(){
 
     document.getElementById('tentativa').value ='';
 }
+
