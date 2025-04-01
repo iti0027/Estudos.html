@@ -30,9 +30,18 @@
         return titular;
     }
 
+    public String getNumConta(){
+        return numConta;
+    }
+
     public void setTitular(String titular){
         this.titular = titular;
     }
+
+    public void setNumConta (String numConta){
+        this.numConta = numConta;
+    }
+
 
     public void exibirInformacoes(){
         System.out.println("Info da Conta");
