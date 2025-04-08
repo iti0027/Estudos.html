@@ -1,4 +1,4 @@
-package java3periodo.Veiculo;
+
 
 public class Moto extends Veiculo {
     private double capBagageiro;

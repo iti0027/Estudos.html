@@ -1,4 +1,4 @@
-package java3periodo.Veiculo;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -8,6 +8,6 @@ public class Main {
         System.out.println("Por favor, digite quantos km você andou: ");
         double km = scanner.nextDouble();
         
-        System.out.println("Você consumiu" + consumo + "litros!");
+        System.out.println("Você consumiu" + getConsumo() + "litros!");
     }
 }
